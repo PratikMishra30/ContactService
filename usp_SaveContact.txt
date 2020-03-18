@@ -1,0 +1,69 @@
+USE [Contact]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_SaveContact]    Script Date: 18-03-2020 12:15:09 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Pratik Mishra
+-- Create date: 17 March 2020
+-- Description:	Save Or Update Contacts
+-- EXEC usp_SaveContact
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_SaveContact]
+		@ID int, 
+		@FirstName nvarchar(max),
+		@LastName nvarchar(max),
+		@EmailID nvarchar(max),
+		@PhoneNumber nvarchar(max),
+		@Status bit=true
+AS
+BEGIN
+
+		IF EXISTS(SELECT 1 FROM CONTACTS WHERE ID = @ID)
+		
+		BEGIN
+			BEGIN TRANSACTION
+			BEGIN TRY
+
+				UPDATE CONTACTS
+				SET   FIRST_NAME = @FirstName,
+				      LAST_NAME=@LastName,
+					  EMAIL_ID= @EmailID,
+					  PHONE_NUMBER=@PhoneNumber,
+					  STATUS=@Status 
+				WHERE ID = @ID
+			COMMIT TRANSACTION	
+			END TRY
+		    BEGIN CATCH
+						IF @@trancount > 0 ROLLBACK TRANSACTION
+						DECLARE @msg nvarchar(2048) = 'Error In Update Record!!' + error_message() 
+						 RAISERROR(@msg, 16, 1)
+		    END CATCH
+			END
+		ELSE
+		BEGIN
+			BEGIN TRANSACTION
+			    BEGIN TRY
+
+				INSERT INTO CONTACTS
+				(FIRST_NAME, LAST_NAME, EMAIL_ID,PHONE_NUMBER,STATUS)
+				VALUES (@FirstName, @LastName, @EmailID, @PhoneNumber,@Status)
+
+			COMMIT TRANSACTION
+			END TRY
+			BEGIN CATCH
+				IF @@trancount > 0 ROLLBACK TRANSACTION
+				DECLARE @msgu nvarchar(2048) = 'The record you want to insert,Already exists!!' + error_message() 
+				 RAISERROR(@msgu, 16, 1)
+			END CATCH
+	    END
+END
+
+GO
+
+

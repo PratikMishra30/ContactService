@@ -1,0 +1,30 @@
+USE [Contact]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_DeleteContact]    Script Date: 18-03-2020 12:13:16 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author:		Pratik Mishra
+-- Create date: 17 March 2020
+-- Description:	Delete Contact
+-- EXEC usp_DeleteContact
+-- =============================================
+CREATE PROCEDURE [dbo].[usp_DeleteContact]
+  @ID int
+
+  AS
+BEGIN
+ DELETE
+ FROM CONTACTS
+ WHERE ID=@ID
+
+
+END
+GO
+
+
