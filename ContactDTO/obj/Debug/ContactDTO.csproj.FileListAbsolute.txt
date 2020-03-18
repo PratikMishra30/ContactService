@@ -1,0 +1,5 @@
+C:\Test\Contact\ContactDTO\bin\Debug\ContactDTO.dll
+C:\Test\Contact\ContactDTO\bin\Debug\ContactDTO.pdb
+C:\Test\Contact\ContactDTO\obj\Debug\ContactDTO.csproj.CoreCompileInputs.cache
+C:\Test\Contact\ContactDTO\obj\Debug\ContactDTO.dll
+C:\Test\Contact\ContactDTO\obj\Debug\ContactDTO.pdb

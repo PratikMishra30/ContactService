@@ -1,0 +1,5 @@
+C:\Test\Contact\ContactCAL\bin\Debug\ContactCAL.dll
+C:\Test\Contact\ContactCAL\bin\Debug\ContactCAL.pdb
+C:\Test\Contact\ContactCAL\obj\Debug\ContactCAL.csproj.CoreCompileInputs.cache
+C:\Test\Contact\ContactCAL\obj\Debug\ContactCAL.dll
+C:\Test\Contact\ContactCAL\obj\Debug\ContactCAL.pdb

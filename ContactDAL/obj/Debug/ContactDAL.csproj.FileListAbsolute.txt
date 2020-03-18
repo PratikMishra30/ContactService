@@ -1,0 +1,11 @@
+C:\Test\Contact\ContactDAL\bin\Debug\ContactDAL.dll
+C:\Test\Contact\ContactDAL\bin\Debug\ContactDAL.pdb
+C:\Test\Contact\ContactDAL\bin\Debug\ContactCAL.dll
+C:\Test\Contact\ContactDAL\bin\Debug\ContactDTO.dll
+C:\Test\Contact\ContactDAL\bin\Debug\ContactCAL.pdb
+C:\Test\Contact\ContactDAL\bin\Debug\ContactDTO.pdb
+C:\Test\Contact\ContactDAL\obj\Debug\ContactDAL.csprojAssemblyReference.cache
+C:\Test\Contact\ContactDAL\obj\Debug\ContactDAL.csproj.CoreCompileInputs.cache
+C:\Test\Contact\ContactDAL\obj\Debug\ContactDAL.csproj.CopyComplete
+C:\Test\Contact\ContactDAL\obj\Debug\ContactDAL.dll
+C:\Test\Contact\ContactDAL\obj\Debug\ContactDAL.pdb
